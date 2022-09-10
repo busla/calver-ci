@@ -26,7 +26,6 @@ const spec: Spec = {
 
   // Aliases
   "-h": "--help",
-  "-v": "--verbose",
   "-l": "--latest",
   "-m": "--modifier",
   "-i": "--identifier",
@@ -40,7 +39,7 @@ const identifier =
   args["--identifier"] || error("missing required argument: --identifier");
 const modifier = args["--modifier"] || "calendar";
 
-const finalizeVersion = (version: string, buildId: string) => {
+const finalizeVersion = (version: string, buildId: string): string => {
   return buildId !== "" ? `${version}+${buildId}` : version;
 };
 
@@ -48,7 +47,7 @@ const getNextTag = (
   tag: string,
   modifier: string,
   buildId = ""
-): string | void => {
+): string | never => {
   if (!tag) {
     error("latest git tag missing!");
   }
@@ -58,7 +57,7 @@ const getNextTag = (
     const version = calver.inc(format, `${tag}`, modifier);
     return finalizeVersion(version, buildId);
   } catch (e) {
-    error(`${e.message}, ${tag}`);
+    return error(`${e.message}, ${tag}`);
   }
 };
 
