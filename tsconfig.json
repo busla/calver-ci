@@ -1,0 +1,19 @@
+{
+  "exclude": ["dist", "node_modules"],
+  "ts-node": {
+    "files": true
+  },
+  "files": ["src/index.ts", "src/index.d.ts"],
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "useUnknownInCatchVariables": false,
+    "checkJs": false,
+    "outDir": "dist"
+  }
+}

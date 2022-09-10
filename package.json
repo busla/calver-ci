@@ -1,0 +1,23 @@
+{
+  "name": "calver-cli",
+  "version": "0.0.1",
+  "packageManager": "yarn@3.2.3",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "build": "tsc",
+    "cli": "ts-node --esm src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.16",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.23.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "arg": "^5.0.2",
+    "calver": "^22.8.4"
+  }
+}
