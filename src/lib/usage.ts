@@ -1,8 +1,4 @@
-# calver-ci
-
-Simple cli wrapper for [calver](https://www.npmjs.com/package/calver)
-
-```bash
+export const usage = `
   calver-ci is thin cli wrapper for node-calver.
 
   see https://github.com/muratgozel/node-calver#README for detailed options.
@@ -18,4 +14,4 @@ Simple cli wrapper for [calver](https://www.npmjs.com/package/calver)
       --version, -v            serialized calver-format
       --identifier, -i         ASCI sequence, see https://semver.org/#spec-item-10
       --format, -f             calver-format
-```
+`;

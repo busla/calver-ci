@@ -1,0 +1,8 @@
+# Package directories
+node_modules
+
+# Test coverage
+coverage
+
+# TypeScript build
+build
