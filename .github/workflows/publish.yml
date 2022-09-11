@@ -18,7 +18,7 @@ jobs:
         run: |
           git config --global user.email ${{github.event.pusher.email}}
           git config --global user.name ${{github.event.pusher.name}}
-          yarn config set version-git-message "bump version to: v%s"
+          yarn config set version-git-message "[skip ci] bump version to: v%s"
           yarn install --frozen-lockfile
           yarn build
           ./scripts/npm-publish.sh
