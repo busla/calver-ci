@@ -29,4 +29,4 @@ echo "new version: ${new_version}"
 yarn version --new-version $new_version
 # shellcheck disable=SC2086
 yarn publish --new-version $new_version --tag latest
-git push --follow-tags
+# git push --follow-tags
