@@ -1,6 +1,6 @@
 {
   "name": "calver-ci",
-  "version": "29.9.10",
+  "version": "22.9.11",
   "packageManager": "yarn@3.2.3",
   "scripts": {
     "calver-ci": "ts-node src/index.ts",
@@ -8,7 +8,8 @@
     "lint": "eslint \"src/**/*.ts\" --fix",
     "clean": "rm -rf ./build",
     "build": "yarn clean && tsc && chmod +x build/index.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "usage": "./scripts/usage.sh"
   },
   "main": "./build/index.js",
   "bin": "./build/index.js",

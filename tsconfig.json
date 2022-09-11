@@ -1,5 +1,10 @@
 {
-  "files": ["src/index.ts", "src/lib/index.ts", "src/types/index.d.ts"],
+  "files": [
+    "src/index.ts",
+    "src/lib/index.ts",
+    "src/index.d.ts",
+    "src/types/index.ts"
+  ],
   "ts-node": {
     "files": true
   },
