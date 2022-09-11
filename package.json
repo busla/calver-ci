@@ -5,6 +5,8 @@
   "scripts": {
     "calver-ci": "ts-node src/index.ts",
     "format": "prettier --loglevel warn --write \"**/*.{ts,js,json,yaml}\"",
+    "format:check": "prettier --loglevel warn \"**/*.{ts,js,json,yaml}\"",
+    "lint:check": "eslint \"src/**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\" --fix",
     "clean": "rm -rf ./build",
     "build": "yarn clean && tsc && chmod +x build/index.js",
