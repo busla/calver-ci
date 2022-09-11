@@ -25,5 +25,6 @@ echo "new version: ${new_version}"
 
 # shellcheck disable=SC2086
 yarn version --new-version $new_version
-# yarn publish --tag v"$new_version"
+# shellcheck disable=SC2086
+yarn publish --new-version $new_version --tag latest
 # git push --tags
