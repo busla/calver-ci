@@ -1,5 +1,5 @@
 import calver from 'calver';
-import { usage } from '.';
+import { usage } from './usage';
 import type { Params } from '../types';
 
 const message = (msg?: string): never => {
