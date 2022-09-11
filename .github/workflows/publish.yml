@@ -14,7 +14,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: can-publish
         run: |
-          yarn install can-npm-publish
+          npm install -g can-npm-publish
           npx can-npm-publish --verbose
       - name: publish
         run: |
