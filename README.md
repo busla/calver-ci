@@ -1,3 +1,7 @@
+[![publish](https://github.com/busla/calver-ci/actions/workflows/publish.yml/badge.svg)](https://github.com/busla/calver-ci/actions/workflows/publish.yml)
+
+[![GitHub issues](https://img.shields.io/github/issues/busla/calver-ci)](https://github.com/busla/calver-ci/issues) [![GitHub license](https://img.shields.io/github/license/busla/calver-ci)](https://github.com/busla/calver-ci/blob/main/LICENSE)
+
 # calver-ci
 
 Simple cli wrapper for [calver](https://www.npmjs.com/package/calver).
@@ -8,7 +12,7 @@ Supports adding a [build-identifier](https://semver.org/#spec-item-10) attribute
 
 ## Usage
 
-```bash
+````bash
     Calver CI.
 
     Thin cli wrapper for node-calver (https://github.com/muratgozel/node-calver)
@@ -33,3 +37,4 @@ Supports adding a [build-identifier](https://semver.org/#spec-item-10) attribute
         --release, -r            Calver format: see calver docs
         --identifier, -i         Sequence of <0-9A-_Za-z>: see https://semver.org/#spec-item-10
         --format, -f             Calver recipe: [default: yy.mm.dd.patch]```
+````
