@@ -12,7 +12,11 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn
-      - run: yarn publish
+      - run: |
+          git config --global user.email ${{github.event.pusher.email}}
+          git config --global user.name ${{github.event.pusher.name}}
+          yarn config set version-git-message "bump version to: v%s"
+          yarn install --frozen-lockfile
+          ./scripts/npm-publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
