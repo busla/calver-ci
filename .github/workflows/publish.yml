@@ -8,13 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: disable branch protection
-        uses: benjefferies/branch-protection-bot@master
-        if: always()
-        with:
-          access_token: ${{ secrets.BOT_USER_TOKEN }}
-          branch: ${{ github.event.repository.default_branch }}
-          enforce_admins: false
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
@@ -30,10 +23,3 @@ jobs:
           ./scripts/npm-publish.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: enable branch protection
-        uses: benjefferies/branch-protection-bot@master
-        if: always()
-        with:
-          access_token: ${{ secrets.BOT_USER_TOKEN }}
-          branch: ${{ github.event.repository.default_branch }}
-          enforce_admins: true
