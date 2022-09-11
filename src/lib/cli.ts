@@ -1,6 +1,7 @@
 import arg from 'arg';
 import { Params } from '../types';
-import { message, spec } from './';
+import { message } from './utils';
+import { spec } from './spec';
 
 const cli = arg(spec);
 
