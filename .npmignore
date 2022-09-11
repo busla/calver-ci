@@ -6,6 +6,6 @@ yarn.lock
 #linters
 .eslint*
 .prettier*
-scripts
+scripts/
 .yarnrc.yml
 .github/
