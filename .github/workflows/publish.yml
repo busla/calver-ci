@@ -12,6 +12,10 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
+      - name: can-publish
+        run: |
+          yarn install can-npm-publish
+          npx can-npm-publish --verbose
       - name: publish
         run: |
           git config --global user.email ${{github.event.pusher.email}}
@@ -22,3 +26,4 @@ jobs:
           ./scripts/npm-publish.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
