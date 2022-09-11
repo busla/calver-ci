@@ -1,6 +1,6 @@
 {
   "name": "calver-ci",
-  "version": "22.9.11-beta.0",
+  "version": "22.9.11-beta.1",
   "packageManager": "yarn@1.22.19",
   "scripts": {
     "calver-ci": "ts-node src/index.ts",
