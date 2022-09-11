@@ -8,3 +8,4 @@ yarn.lock
 .prettier*
 scripts
 .yarnrc.yml
+.github/
