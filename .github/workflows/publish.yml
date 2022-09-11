@@ -14,7 +14,8 @@ jobs:
       - run: |
           CURRENT_VERSION=$(sed 's/.*"version": "\(.*\)".*/\1/;t;d' ./package.json)
           npm ci
-          npm build
+          npm run build
+          npm version
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
