@@ -398,7 +398,7 @@ __metadata:
     esbuild-windows-arm64:
       optional: false
   bin:
-    calver-ci: ./build/index.js
+    calver-ci: ./dist/index.js
   languageName: unknown
   linkType: soft
 
