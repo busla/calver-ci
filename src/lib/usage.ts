@@ -15,7 +15,7 @@ export const usage = `
         calver-ci rc -r 22.9.10.0-rc.0                            # 22.9.10.0-rc.1
         calver-ci calendar -r 22.9.10.0-rc.0                      # 22.9.10.0
         calver-ci patch -r 22.9.10.0 -i abcd123                   # 22.9.10.1+abcd123
-        calver-ci patch -r 22.9.10.0 -i "hvað er að frétta" -l is # 22.9.10.1+hvad-er-ad-fretta
+        calver-ci patch -r 22.9.10.0 -i "hvað er að frétta"       # 22.9.10.1+hvad-er-ad-fretta
         calver-ci minor -v 22.9 -f yy.mm.minor  # 22.9.1
         calver-ci -h | --help
 
@@ -24,5 +24,4 @@ export const usage = `
         --release, -r            Calver format: see calver docs
         --identifier, -i         Sequence of <0-9A-_Za-z>: see https://semver.org/#spec-item-10
         --format, -f             Calver recipe: [default: yy.mm.dd.patch]
-        --locale, -l             Locale for slugifying build identifiers: [default: en]
 `;
