@@ -10,5 +10,5 @@ void build({
   minify: true,
   external: [],
   entryPoints: ['src/index.ts'],
-  outfile: 'dist/index.mjs',
+  outfile: 'dist/index.js',
 });

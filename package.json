@@ -15,8 +15,8 @@
     "typecheck": "tsc --noEmit",
     "usage": "./scripts/usage.sh"
   },
-  "main": "./build/index.js",
-  "bin": "./build/index.js",
+  "main": "./dist/index.js",
+  "bin": "./dist/index.js",
   "engines": {
     "node": ">=14.0.0"
   },
