@@ -2,7 +2,9 @@
 
 ![npm bundle size](https://img.shields.io/bundlephobia/min/calver-ci) ![GitHub repo size](https://img.shields.io/github/repo-size/busla/calver-ci)
 
-![npm (prod) dependency version](https://img.shields.io/npm/dependency-version/calver-ci/calver) ![node-current](https://img.shields.io/node/v/calver-ci?color=blue)
+![npm (prod) dependency version](https://img.shields.io/npm/dependency-version/calver-ci/calver) ![npm (prod) dependency version](https://img.shields.io/npm/dependency-version/calver-ci/arg) ![npm (prod) dependency version](https://img.shields.io/npm/dependency-version/calver-ci/slug)
+
+![node-current](https://img.shields.io/node/v/calver-ci?color=blue)
 
 [![GitHub license](https://img.shields.io/github/license/busla/calver-ci)](https://github.com/busla/calver-ci/blob/main/LICENSE)
 
