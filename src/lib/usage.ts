@@ -7,14 +7,15 @@ export const usage = `
 
 
     Usage:
-        calver-ci (patch|dev|rc|..) -r <calver-format> -i <0-9A-_Za-z> [-f|--yy.mm.dd.patch]
+        calver-ci (patch|dev|rc|..) -r <calver-format> -i <0-9A-_Za-z> [-f|--yy.mm.dd.patch] [-l|--en]
 
 
     Examples:
-        calver-ci rc -r 22.9.10.0               # 22.9.10.0-rc.0
-        calver-ci rc -r 22.9.10.0-rc.0          # 22.9.10.0-rc.1
-        calver-ci calendar -r 22.9.10.0-rc.0    # 22.9.10.0
-        calver-ci patch -r 22.9.10.0 -i abcd123 # 22.9.10.1+abcd123
+        calver-ci rc -r 22.9.10.0                                 # 22.9.10.0-rc.0
+        calver-ci rc -r 22.9.10.0-rc.0                            # 22.9.10.0-rc.1
+        calver-ci calendar -r 22.9.10.0-rc.0                      # 22.9.10.0
+        calver-ci patch -r 22.9.10.0 -i abcd123                   # 22.9.10.1+abcd123
+        calver-ci patch -r 22.9.10.0 -i "hvað er að frétta"       # 22.9.10.1+hvad-er-ad-fretta
         calver-ci minor -v 22.9 -f yy.mm.minor  # 22.9.1
         calver-ci -h | --help
 
