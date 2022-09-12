@@ -7,14 +7,26 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: checkout
+        uses: actions/checkout@v3
         with:
           token: ${{ secrets.WORKFLOW_GIT_ACCESS_TOKEN }}
+          fetch-depth: 0
+      - name: modified files
+        id: changed-files-source-code
+        uses: tj-actions/changed-files@v29.0.4
+        with:
+          files: |
+            src/*
+            package.json
+            yarn.lock
       - uses: actions/setup-node@v3
+        if: steps.changed-files-source-code.outputs.any_changed == 'true'
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - name: publish
+        if: steps.changed-files-source-code.outputs.any_changed == 'true'
         run: |
           git config --global user.email ${{github.event.pusher.email}}
           git config --global user.name ${{github.event.pusher.name}}
