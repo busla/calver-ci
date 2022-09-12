@@ -20,6 +20,10 @@ const slugify = (value: string) => {
   return slug(value, options);
 };
 
+const sanitizeRelease = (value: string) => {
+  return value.replace(/\+.*/g, '');
+};
+
 const finalizeRelease = (version: string, buildId: string): string => {
   return buildId !== '' ? `${version}+${slugify(buildId)}` : version;
 };
@@ -31,7 +35,11 @@ const getNextRelease = ({
   format = 'yy.mm.dd.patch',
 }: Params): string | never => {
   try {
-    const nextVersion = calver.inc(format, `${release}`, modifier);
+    const nextVersion = calver.inc(
+      format,
+      `${sanitizeRelease(release)}`,
+      modifier,
+    );
     return finalizeRelease(nextVersion, identifier);
   } catch (e) {
     return message(`${e.message}, ${release}`);
