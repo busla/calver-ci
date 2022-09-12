@@ -1,4 +1,5 @@
 import calver from 'calver';
+import slug from 'slug';
 import { usage } from './usage';
 import type { Params } from '../types';
 
@@ -11,8 +12,16 @@ const message = (msg?: string): never => {
   process.exit(0); // ignore stack trace when exiting
 };
 
+const slugify = (value: string) => {
+  const options = {
+    ...slug.defaults.modes['rfc3986'],
+    charmap: { ...slug.charmap, '/': '-' },
+  };
+  return slug(value, options);
+};
+
 const finalizeRelease = (version: string, buildId: string): string => {
-  return buildId !== '' ? `${version}+${buildId}` : version;
+  return buildId !== '' ? `${version}+${slugify(buildId)}` : version;
 };
 
 const getNextRelease = ({
