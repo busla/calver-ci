@@ -1,10 +1,8 @@
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/busla/calver-ci/publish/main) [![GitHub issues](https://img.shields.io/github/issues/busla/calver-ci)](https://github.com/busla/calver-ci/issues) ![GitHub pull requests](https://img.shields.io/github/issues-pr/busla/calver-ci) ![GitHub last commit](https://img.shields.io/github/last-commit/busla/calver-ci?color=brightgreen)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/busla/calver-ci/publish/main) [![GitHub issues](https://img.shields.io/github/issues/busla/calver-ci)](https://github.com/busla/calver-ci/issues) ![GitHub pull requests](https://img.shields.io/github/issues-pr/busla/calver-ci) ![GitHub last commit](https://img.shields.io/github/last-commit/busla/calver-ci?color=brightgreen) ![npm](https://img.shields.io/npm/dt/calver-ci?color=brightgreen&logo=npm)
 
 ![npm bundle size](https://img.shields.io/bundlephobia/min/calver-ci) ![GitHub repo size](https://img.shields.io/github/repo-size/busla/calver-ci)
 
-![npm](https://img.shields.io/npm/v/calver-ci)
-
-![npm (prod) dependency version](https://img.shields.io/npm/dependency-version/calver-ci/arg) ![npm (prod) dependency version](https://img.shields.io/npm/dependency-version/calver-ci/calver) ![node-current](https://img.shields.io/node/v/calver-ci?color=blue)
+![npm (prod) dependency version](https://img.shields.io/npm/dependency-version/calver-ci/calver) ![node-current](https://img.shields.io/node/v/calver-ci?color=blue)
 
 [![GitHub license](https://img.shields.io/github/license/busla/calver-ci)](https://github.com/busla/calver-ci/blob/main/LICENSE)
 
