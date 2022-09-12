@@ -12,7 +12,7 @@
 
 Simple cli wrapper for [calver](https://www.npmjs.com/package/calver).
 
-Depends on two packages that have zero external dependencies.
+Depends on three packages that have zero external dependencies.
 
 Supports adding a [build-identifier](https://semver.org/#spec-item-10) attribute to simplify tracking deployment regressions.
 
