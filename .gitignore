@@ -8,8 +8,6 @@
 /lib
 /tmp
 /node_modules
-!.pnp.*
-.yarn/*
 !.yarn/unplugged
 !.yarn/releases
 !.yarn/patches
