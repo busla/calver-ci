@@ -1,5 +1,5 @@
 import calver from 'calver';
-import {slugify} from './slugify';
+import { slugify } from './slugify';
 import { usage } from './usage';
 import type { Params } from '../types';
 
