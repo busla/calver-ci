@@ -37,7 +37,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/slug", "npm:5.0.3"],\
             ["@typescript-eslint/eslint-plugin", "virtual:81a182dcd1284f02c484ee9e6a24a3d0878419c5bec1fe8680234ed5c61ef2ddcf393e7f21ebe323242811f8f4020adb6f243d3c39c0685acc7fed08928d59f5#npm:5.36.2"],\
             ["@typescript-eslint/parser", "virtual:81a182dcd1284f02c484ee9e6a24a3d0878419c5bec1fe8680234ed5c61ef2ddcf393e7f21ebe323242811f8f4020adb6f243d3c39c0685acc7fed08928d59f5#npm:5.36.2"],\
-            ["@yarnpkg/esbuild-plugin-pnp", "virtual:81a182dcd1284f02c484ee9e6a24a3d0878419c5bec1fe8680234ed5c61ef2ddcf393e7f21ebe323242811f8f4020adb6f243d3c39c0685acc7fed08928d59f5#npm:3.0.0-rc.15"],\
             ["arg", "npm:5.0.2"],\
             ["calver", "npm:22.8.4"],\
             ["clear-folder", "npm:3.2.1"],\
@@ -47,7 +46,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.23.1"],\
             ["eslint-config-prettier", "virtual:81a182dcd1284f02c484ee9e6a24a3d0878419c5bec1fe8680234ed5c61ef2ddcf393e7f21ebe323242811f8f4020adb6f243d3c39c0685acc7fed08928d59f5#npm:8.5.0"],\
             ["prettier", "npm:2.7.1"],\
-            ["slug", "npm:8.0.0"],\
             ["ts-eager", "npm:2.0.2"],\
             ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"]\
           ],\
@@ -406,29 +404,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@yarnpkg/esbuild-plugin-pnp", [\
-        ["npm:3.0.0-rc.15", {\
-          "packageLocation": "./.yarn/cache/@yarnpkg-esbuild-plugin-pnp-npm-3.0.0-rc.15-b916c218b3-04da15355a.zip/node_modules/@yarnpkg/esbuild-plugin-pnp/",\
-          "packageDependencies": [\
-            ["@yarnpkg/esbuild-plugin-pnp", "npm:3.0.0-rc.15"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:81a182dcd1284f02c484ee9e6a24a3d0878419c5bec1fe8680234ed5c61ef2ddcf393e7f21ebe323242811f8f4020adb6f243d3c39c0685acc7fed08928d59f5#npm:3.0.0-rc.15", {\
-          "packageLocation": "./.yarn/__virtual__/@yarnpkg-esbuild-plugin-pnp-virtual-cdd6bc6423/0/cache/@yarnpkg-esbuild-plugin-pnp-npm-3.0.0-rc.15-b916c218b3-04da15355a.zip/node_modules/@yarnpkg/esbuild-plugin-pnp/",\
-          "packageDependencies": [\
-            ["@yarnpkg/esbuild-plugin-pnp", "virtual:81a182dcd1284f02c484ee9e6a24a3d0878419c5bec1fe8680234ed5c61ef2ddcf393e7f21ebe323242811f8f4020adb6f243d3c39c0685acc7fed08928d59f5#npm:3.0.0-rc.15"],\
-            ["@types/esbuild", null],\
-            ["esbuild", "npm:0.15.7"],\
-            ["tslib", "npm:2.4.0"]\
-          ],\
-          "packagePeers": [\
-            "@types/esbuild",\
-            "esbuild"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["acorn", [\
         ["npm:8.8.0", {\
           "packageLocation": "./.yarn/cache/acorn-npm-8.8.0-9ef399ab45-7270ca82b2.zip/node_modules/acorn/",\
@@ -587,7 +562,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/slug", "npm:5.0.3"],\
             ["@typescript-eslint/eslint-plugin", "virtual:81a182dcd1284f02c484ee9e6a24a3d0878419c5bec1fe8680234ed5c61ef2ddcf393e7f21ebe323242811f8f4020adb6f243d3c39c0685acc7fed08928d59f5#npm:5.36.2"],\
             ["@typescript-eslint/parser", "virtual:81a182dcd1284f02c484ee9e6a24a3d0878419c5bec1fe8680234ed5c61ef2ddcf393e7f21ebe323242811f8f4020adb6f243d3c39c0685acc7fed08928d59f5#npm:5.36.2"],\
-            ["@yarnpkg/esbuild-plugin-pnp", "virtual:81a182dcd1284f02c484ee9e6a24a3d0878419c5bec1fe8680234ed5c61ef2ddcf393e7f21ebe323242811f8f4020adb6f243d3c39c0685acc7fed08928d59f5#npm:3.0.0-rc.15"],\
             ["arg", "npm:5.0.2"],\
             ["calver", "npm:22.8.4"],\
             ["clear-folder", "npm:3.2.1"],\
@@ -597,7 +571,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.23.1"],\
             ["eslint-config-prettier", "virtual:81a182dcd1284f02c484ee9e6a24a3d0878419c5bec1fe8680234ed5c61ef2ddcf393e7f21ebe323242811f8f4020adb6f243d3c39c0685acc7fed08928d59f5#npm:8.5.0"],\
             ["prettier", "npm:2.7.1"],\
-            ["slug", "npm:8.0.0"],\
             ["ts-eager", "npm:2.0.2"],\
             ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"]\
           ],\
@@ -685,7 +658,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],\
       ["core-js-pure", [\
         ["npm:3.25.1", {\
-          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.25.1-234b6b9f3b/node_modules/core-js-pure/",\
+          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.25.1-234b6b9f3b-0123131ec7.zip/node_modules/core-js-pure/",\
           "packageDependencies": [\
             ["core-js-pure", "npm:3.25.1"]\
           ],\
@@ -775,13 +748,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["esbuild", [\
-        ["npm:0.11.23", {\
-          "packageLocation": "./.yarn/unplugged/esbuild-npm-0.11.23-3c7e5ace5a/node_modules/esbuild/",\
-          "packageDependencies": [\
-            ["esbuild", "npm:0.11.23"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.15.7", {\
           "packageLocation": "./.yarn/unplugged/esbuild-npm-0.15.7-9aee421406/node_modules/esbuild/",\
           "packageDependencies": [\
@@ -1887,15 +1853,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["slug", [\
-        ["npm:8.0.0", {\
-          "packageLocation": "./.yarn/cache/slug-npm-8.0.0-b7bb40791b-15fa551f61.zip/node_modules/slug/",\
-          "packageDependencies": [\
-            ["slug", "npm:8.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["source-map", [\
         ["npm:0.6.1", {\
           "packageLocation": "./.yarn/cache/source-map-npm-0.6.1-1a3621db16-59ce8640cf.zip/node_modules/source-map/",\
@@ -2007,7 +1964,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ts-eager-npm-2.0.2-b8fedc2120-5f227c3dcb.zip/node_modules/ts-eager/",\
           "packageDependencies": [\
             ["ts-eager", "npm:2.0.2"],\
-            ["esbuild", "npm:0.11.23"],\
+            ["esbuild", "npm:0.15.7"],\
             ["source-map-support", "npm:0.5.21"]\
           ],\
           "linkType": "HARD"\
