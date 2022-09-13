@@ -1,8 +1,7 @@
 src
-.yarn/
+.yarn
 tsconfig.json
 yarn.lock
-
 #linters
 .eslint*
 .prettier*

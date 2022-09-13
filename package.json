@@ -1,21 +1,23 @@
 {
   "name": "calver-ci",
   "version": "22.9.13-rc.30",
-  "packageManager": "yarn@1.22.19",
+  "packageManager": "yarn@3.2.3",
   "scripts": {
-    "calver-ci": "ts-node src/index.ts",
-    "lint": "npx eslint src",
-    "lint:fix": "npm run lint -- --fix",
-    "prettier": "npx prettier src --check",
-    "prettier:fix": "npm run prettier -- --write",
-    "format": "npm run prettier:fix && npm run lint:fix",
-    "clean": "rm -rf ./build",
-    "build": "yarn clean && tsc && chmod +x build/index.js",
+    "calver-ci": "node -r ts-eager/register src/index.ts",
+    "lint": "eslint src",
+    "lint:fix": "concurrently \"yarn:lint --fix\"",
+    "prettier": "prettier src --check",
+    "prettier:fix": "concurrently \"yarn:prettier --write\"",
+    "format": "concurrently \"yarn:prettier:fix\" \"yarn:lint:fix\"",
+    "clean": "cf dist",
+    "build": "concurrently --group \"yarn:clean\" \"yarn:build:preparebuild\" \"yarn:build:ts\"",
+    "build:preparebuild": "yarn rebuild",
+    "build:ts": "node -r ts-eager/register src/build.ts",
     "typecheck": "tsc --noEmit",
     "usage": "./scripts/usage.sh"
   },
-  "main": "./build/index.js",
-  "bin": "./build/index.js",
+  "main": "./dist/index.js",
+  "bin": "./dist/index.js",
   "engines": {
     "node": ">=14.0.0"
   },
@@ -43,18 +45,50 @@
   },
   "homepage": "https://github.com/busla/calver-ci#readme",
   "devDependencies": {
-    "@types/node": "^18.7.16",
-    "@types/slug": "^5.0.3",
-    "@typescript-eslint/eslint-plugin": "^5.36.2",
-    "@typescript-eslint/parser": "^5.36.2",
-    "eslint": "^8.23.1",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.8.3"
+    "@types/node": "18.7.16",
+    "@types/slug": "5.0.3",
+    "@typescript-eslint/eslint-plugin": "5.36.2",
+    "@typescript-eslint/parser": "5.36.2",
+    "clear-folder": "3.2.1",
+    "concurrently": "7.4.0",
+    "esbuild": "0.15.7",
+    "esbuild-darwin-64": "0.15.7",
+    "eslint": "8.23.1",
+    "eslint-config-prettier": "8.5.0",
+    "prettier": "2.7.1",
+    "ts-eager": "2.0.2",
+    "typescript": "4.8.3"
   },
   "dependencies": {
     "arg": "^5.0.2",
     "calver": "^22.8.4"
+  },
+  "resolutions": {
+    "esbuild": "0.15.7"
+  },
+  "dependenciesMeta": {
+    "core-js-pure": {
+      "built": false
+    }
+  },
+  "peerDependenciesMeta": {
+    "esbuild-darwin-64": {
+      "optional": false
+    },
+    "esbuild-darwin-arm64": {
+      "optional": false
+    },
+    "esbuild-linux-64": {
+      "optional": false
+    },
+    "esbuild-linux-arm64": {
+      "optional": false
+    },
+    "esbuild-windows-64": {
+      "optional": false
+    },
+    "esbuild-windows-arm64": {
+      "optional": false
+    }
   }
 }
