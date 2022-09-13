@@ -10,7 +10,8 @@
     "prettier:fix": "concurrently \"yarn:prettier --write\"",
     "format": "concurrently \"yarn:prettier:fix\" \"yarn:lint:fix\"",
     "clean": "cf dist",
-    "build": "concurrently --group \"yarn:clean\" \"yarn:build:ts\"",
+    "build": "concurrently --group \"yarn:clean\" \"yarn:build:preparebuild\" \"yarn:build:ts\"",
+    "build:preparebuild": "yarn rebuild",
     "build:ts": "node -r ts-eager/register src/build.ts",
     "typecheck": "tsc --noEmit",
     "usage": "./scripts/usage.sh"
