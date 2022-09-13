@@ -4,7 +4,7 @@ export const slugify = (msg: string): string => {
     .normalize('NFD')
     .replace(/[^\x20-\x7E]/g, '')
     .replace(/[\s/\\]/g, '-')
-    .replace(/[^a-zA-Z0-9\-]/g, '')
+    .replace(/[^a-zA-Z0-9-]/g, '')
     .replace(/[-]{2,}/g, '-')
     .toLowerCase();
 };
