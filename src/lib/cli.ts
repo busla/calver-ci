@@ -11,5 +11,5 @@ export const params: Params = {
   modifier: cli._[0] || message('modifier missing'),
   release: cli['--release'] || message('--release missing'),
   identifier: cli['--identifier'] || '',
-  format: cli['--format'] || 'yy.dd.mm.patch',
+  format: cli['--format'] || 'yy.mm.dd.patch',
 };

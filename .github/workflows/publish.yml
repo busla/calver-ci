@@ -8,22 +8,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.WORKFLOW_GIT_ACCESS_TOKEN }}
           fetch-depth: 0
       - name: modified files
         id: changed-files-source-code
-        uses: tj-actions/changed-files@v29.0.4
+        uses: tj-actions/changed-files@v44
         with:
           files: |
             src/*
             package.json
             yarn.lock
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         if: steps.changed-files-source-code.outputs.any_changed == 'true'
         with:
-          node-version: '16.x'
+          node-version: '22.x'
           registry-url: 'https://registry.npmjs.org'
       - name: publish
         if: steps.changed-files-source-code.outputs.any_changed == 'true'

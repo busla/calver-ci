@@ -34,7 +34,8 @@ const getNextRelease = ({
     );
     return finalizeRelease(nextVersion, identifier);
   } catch (e) {
-    return message(`${e.message}, ${release}`);
+    const msg = e instanceof Error ? e.message : String(e);
+    return message(`${msg}, ${release}`);
   }
 };
 

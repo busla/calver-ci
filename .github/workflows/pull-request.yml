@@ -15,7 +15,7 @@ jobs:
   lint-pr-name:
     runs-on: ubuntu-latest
     steps:
-      - uses: amannn/action-semantic-pull-request@v4
+      - uses: amannn/action-semantic-pull-request@v5
         with:
           requireScope: false
           types: |
@@ -36,14 +36,15 @@ jobs:
   lint-code:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: '22.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: lint
+      - name: lint and test
         run: |
           yarn install
           yarn lint
           yarn prettier
           yarn typecheck
+          yarn test

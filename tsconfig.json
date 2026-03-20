@@ -1,15 +1,9 @@
 {
-  "files": [
-    "src/index.ts",
-    "src/lib/index.ts",
-    "src/index.d.ts",
-    "src/types/index.ts"
-  ],
-  "ts-node": {
-    "files": true
-  },
+  "files": ["src/index.d.ts"],
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "build"],
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2022",
     "module": "CommonJS",
     "allowJs": true,
     "checkJs": false,
@@ -17,7 +11,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "useUnknownInCatchVariables": false,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./build"
   }
